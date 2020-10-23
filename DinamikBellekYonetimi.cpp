@@ -1,10 +1,5 @@
-// Yağızcem CENGİZ
-// 170757058
-// Bilgisayar Mühendisliği
-// Nesneye Yönelik Programlama BIM - 104
-// II. Dönem (2. yarıyıl)
-// Proje4
-// Dr. Öğr. Üyesi Gülşah TÜMÜKLÜ ÖZYER
+// Yagizcem CENGIZ
+
 
 #include "DinamikBellekYonetimi.h"
 #include <iostream>
@@ -15,7 +10,7 @@ using namespace std;
 bool DinamikBellekYonetimi::EssizEleman(int **matris, int satirSayisi, int sutunSayisi, int elemanSayisi)
 {
 	int k = 0; 
-	for (int i = 0; i < satirSayisi; i++) // Eleman sayisini , dizinin içine girip aratıyoruz.
+	for (int i = 0; i < satirSayisi; i++) // Eleman sayisini , dizinin iÃ§ine girip aratÃ½yoruz.
 	{
 		for (int j = 0; j < sutunSayisi; j++)
 		{
@@ -25,7 +20,7 @@ bool DinamikBellekYonetimi::EssizEleman(int **matris, int satirSayisi, int sutun
 	}
 
 	
-	if (k > 1) // Eğer eleman sayisi , 1 den fazlaysa false döndürüyoruz.
+	if (k > 1) // EÃ°er eleman sayisi , 1 den fazlaysa false dÃ¶ndÃ¼rÃ¼yoruz.
 		return false;
 		
 	return true;
@@ -33,36 +28,36 @@ bool DinamikBellekYonetimi::EssizEleman(int **matris, int satirSayisi, int sutun
 
 bool DinamikBellekYonetimi::SatirToplam(int **matris, int boyut, int toplam)
 {
-	int t = 0; // toplamı 0'a eşitliyoruz.
+	int t = 0; // toplamÃ½ 0'a eÃ¾itliyoruz.
 	for (int i = 0; i < boyut; i++)
 	{
 		t = 0;
-		for (int j = 0; j < boyut; j++)  // Matris içindeki satırların toplamı , t'ye eşit mi diye bakıyoruz.
+		for (int j = 0; j < boyut; j++)  // Matris iÃ§indeki satÃ½rlarÃ½n toplamÃ½ , t'ye eÃ¾it mi diye bakÃ½yoruz.
 		{
 			t = t + matris[i][j];
 		}
 
-		if (toplam != t) // Satır toplamımız , t ye eşit değilse false döndürüyoruz.
+		if (toplam != t) // SatÃ½r toplamÃ½mÃ½z , t ye eÃ¾it deÃ°ilse false dÃ¶ndÃ¼rÃ¼yoruz.
 			return false;
 	}
-	return true; // Eğer eşitse true döndürüyoruz.
+	return true; // EÃ°er eÃ¾itse true dÃ¶ndÃ¼rÃ¼yoruz.
 }
 
 bool DinamikBellekYonetimi::SutunToplam( int **matris,  int boyut,  int toplam)
 {
-	int t = 0; // toplamı 0'a eşitliyoruz.
+	int t = 0; // toplamÃ½ 0'a eÃ¾itliyoruz.
 	for (int i = 0; i < boyut; i++)
 	{
 		t = 0;
-		for (int j = 0; j < boyut; j++)  // burada da , üstte yazdığımız fonksiyon gibi yapıyoruz. Tek farkı , bu sefer satır değil de sütunların toplamına bakacağız.
+		for (int j = 0; j < boyut; j++)  // burada da , Ã¼stte yazdÃ½Ã°Ã½mÃ½z fonksiyon gibi yapÃ½yoruz. Tek farkÃ½ , bu sefer satÃ½r deÃ°il de sÃ¼tunlarÃ½n toplamÃ½na bakacaÃ°Ã½z.
 		{
 			t = t + matris[j][i];
 		}
 
-		if (toplam != t) // Sütunların toplamı , t ye eşit değilse false döndürüyoruz.
+		if (toplam != t) // SÃ¼tunlarÃ½n toplamÃ½ , t ye eÃ¾it deÃ°ilse false dÃ¶ndÃ¼rÃ¼yoruz.
 			return false;
 	}
-	return true; // Eğer eşitse true döndürüyoruz.
+	return true; // EÃ°er eÃ¾itse true dÃ¶ndÃ¼rÃ¼yoruz.
 }
 
 
@@ -74,9 +69,9 @@ bool DinamikBellekYonetimi::GizemliMatrisMi(int** matris, int satirSayisi, int s
 
 		for (int i = 0; i < boyut; i++)
 		{
-			for (int j = 0; j < boyut; j++)  // Formülde verildiği gibi , 1 ile n^2 arasındaki tam sayıları kontrol ediyoruz.
+			for (int j = 0; j < boyut; j++)  // FormÃ¼lde verildiÃ°i gibi , 1 ile n^2 arasÃ½ndaki tam sayÃ½larÃ½ kontrol ediyoruz.
 			{
-				if (matris[i][j] < min || matris[i][j] > max) // Eğer sayı 1 den küçük veya n^2'den büyük olduğu durumda false döndürüyoruz ve Otomatik olarak matrisimizin , Gizemli matris olmadığını söyleyebiliyoruz.
+				if (matris[i][j] < min || matris[i][j] > max) // EÃ°er sayÃ½ 1 den kÃ¼Ã§Ã¼k veya n^2'den bÃ¼yÃ¼k olduÃ°u durumda false dÃ¶ndÃ¼rÃ¼yoruz ve Otomatik olarak matrisimizin , Gizemli matris olmadÃ½Ã°Ã½nÃ½ sÃ¶yleyebiliyoruz.
 					return false;
 			}
 		}
@@ -86,33 +81,33 @@ bool DinamikBellekYonetimi::GizemliMatrisMi(int** matris, int satirSayisi, int s
 			for (int j = 0; j < boyut; j++)
 			{
 				
-				if (!EssizEleman(matris, boyut, boyut, matris[i][j])) // EssizEleman fonksiyonumuzu burada çağırıyoruz. Eğer EssizEleman fonksiyonunun içindeki şeyleri karşılamıyorsa , false döndürüyoruz. 
+				if (!EssizEleman(matris, boyut, boyut, matris[i][j])) // EssizEleman fonksiyonumuzu burada Ã§aÃ°Ã½rÃ½yoruz. EÃ°er EssizEleman fonksiyonunun iÃ§indeki Ã¾eyleri karÃ¾Ã½lamÃ½yorsa , false dÃ¶ndÃ¼rÃ¼yoruz. 
 					return false;
 			}
 		}
 
 
 
-		int t = 0;  // Toplamı 0'a eşitledik.
-		int t2 = (boyut * (pow(boyut, 2) + 1)) / 2; // Toplam 2 yani M sabitinin formulünü yazıyoruz.
+		int t = 0;  // ToplamÃ½ 0'a eÃ¾itledik.
+		int t2 = (boyut * (pow(boyut, 2) + 1)) / 2; // Toplam 2 yani M sabitinin formulÃ¼nÃ¼ yazÃ½yoruz.
 
-		for (int i = 0; i < boyut; i++)  // Matristeki çapraz elemanların toplamını buluyoruz.
+		for (int i = 0; i < boyut; i++)  // Matristeki Ã§apraz elemanlarÃ½n toplamÃ½nÃ½ buluyoruz.
 			t = t + matris[i][i];
 
-		if (t != t2)  // Toplam , Toplam 2'ye yani çapraz toplamına eşit değilse false döndürüyoruz.
+		if (t != t2)  // Toplam , Toplam 2'ye yani Ã§apraz toplamÃ½na eÃ¾it deÃ°ilse false dÃ¶ndÃ¼rÃ¼yoruz.
 			return false;
 
 		int j = 0;
 		t = 0;
 
 
-		for (int i = satirSayisi-1; i >= 0; i--)  // Çapraz elemanların toplamını bulmaya devam ediyoruz.
+		for (int i = satirSayisi-1; i >= 0; i--)  // Ã‡apraz elemanlarÃ½n toplamÃ½nÃ½ bulmaya devam ediyoruz.
 		{
 			t = t + matris[j][i];
 			j++;
 		}
 
-		if (t != t2)  //Toplam , Toplam 2'ye yani çapraz toplamına eşit değilse false döndürüyoruz.
+		if (t != t2)  //Toplam , Toplam 2'ye yani Ã§apraz toplamÃ½na eÃ¾it deÃ°ilse false dÃ¶ndÃ¼rÃ¼yoruz.
 			return false;
 
 		if (!SutunToplam(matris, boyut, t2) || !SatirToplam(matris, boyut, t2))
@@ -123,7 +118,7 @@ bool DinamikBellekYonetimi::GizemliMatrisMi(int** matris, int satirSayisi, int s
 	}
 	else
 	{
-		return false;  // Gizemli Matris değilse false döndürüyoruz.
+		return false;  // Gizemli Matris deÃ°ilse false dÃ¶ndÃ¼rÃ¼yoruz.
 	}
 }
 
@@ -139,7 +134,7 @@ bool DinamikBellekYonetimi::SatirdakiMinEleman(int **matris, int i, int satirSay
 	
 	for (int j = 0; j < satirSayisi; j++)
 	{
-		if (elemanSayisi > matris[i][j])  // Satırdaki minimum eleman olup olmadığını kontrol ediyoruz.
+		if (elemanSayisi > matris[i][j])  // SatÃ½rdaki minimum eleman olup olmadÃ½Ã°Ã½nÃ½ kontrol ediyoruz.
 			return false;
 	}
 	return true;
@@ -151,7 +146,7 @@ bool DinamikBellekYonetimi::SutundekiMaksEleman(int **matris, int j, int sutunSa
 	
 	for (int i = 0; i < sutunSayisi; i++)
 	{
-		if (elemanSayisi < matris[i][j]) //Sutundaki maksimum eleman olup olmadığını kontrol ediyoruz.
+		if (elemanSayisi < matris[i][j]) //Sutundaki maksimum eleman olup olmadÃ½Ã°Ã½nÃ½ kontrol ediyoruz.
 			return false;
 	}
 	return true;
@@ -167,7 +162,7 @@ int DinamikBellekYonetimi::SansliMatrisElemanlarininSayisi(int **matris, int sat
 		for (int j = 0; j < sutunSayisi; j++)
 		{
 			
-			if (!EssizEleman(matris, satirSayisi, sutunSayisi, matris[i][j])) // Matrisin içindeki elemanların Eşsiz olup olmadığını göstermek amacıyla EssizEleman fonskiyonumuzu çağırıyoruz.
+			if (!EssizEleman(matris, satirSayisi, sutunSayisi, matris[i][j])) // Matrisin iÃ§indeki elemanlarÃ½n EÃ¾siz olup olmadÃ½Ã°Ã½nÃ½ gÃ¶stermek amacÃ½yla EssizEleman fonskiyonumuzu Ã§aÃ°Ã½rÃ½yoruz.
 				return elemanSayisi;
 		}
 	}
